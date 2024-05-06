@@ -3,6 +3,14 @@
 <p align="center">
 </p>
 
+## 🙋 Autor
+
+👋 Olá, Sou Rafael Machado.
+
+🚀 Redes:
+
+- [LinkedIn](https://www.linkedin.com/in/rafmco/)
+
 
 ## 💡LOGIN com NEXTJS e NEXT-AUTH
 
@@ -54,10 +62,11 @@ Utiliza Next.js e Next-Auth para criar um app de Login autenticado, protegido co
 - Client Components
 
 
-## 🧭 Referências
+## 📚 Referências
 
-- Next-Auth Login Authentication Tutorial with Next.js App Directory
-  - [https://youtu.be/Pth9KKzbXpM](https://youtu.be/w2h54xz6Ndw)
+- 🔗 [Next-Auth Login Authentication Tutorial with Next.js App Directory](https://youtu.be/w2h54xz6Ndw)
+- 🔗 [NextAuth.js Official Site](https://next-auth.js.org/)
+- 🔗 [Next.js Official Site](https://nextjs.org/)
 
 
 ## © Licença
