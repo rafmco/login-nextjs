@@ -38,22 +38,20 @@ Utiliza Next.js e Next-Auth para criar um app de Login autenticado, protegido co
 - Instalar Next-Auth
   - `npm install next-auth`
 - Add Auth Route Handler
-	- `./app/api/auth/[...nextauth]/route.ts`
+  - `./app/api/auth/[...nextauth]/route.ts`
 - Add Next Auth Providers (Options)
   - `./app/api/auth/[...nextauth]/options.ts`
   - Add to .env.local
-	- `NEXTAUTH_SECRET=""`
-  - Generate Random Secret
+    - `NEXTAUTH_SECRET=""`
+- Generate Random Secret
   - `openssl rand -base64 32`
 - Configurar OAUTH (Google, GitHub, etc)
   - Add to .env.local
-  - `?_CLIENT_ID=""`
-  - `?_CLIENT_SECRET=""`
+    - `?_CLIENT_ID=""`
+    - `?_CLIENT_SECRET=""`
 - Configurar Providers
-  - 
 - Enviar GET Request
 - Client Components
-- 'Setar' variáveis no `.env` para o RabbitMQ, Web Socket e MongoDB
 
 
 ## 🧭 Referências
