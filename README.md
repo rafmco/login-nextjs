@@ -68,6 +68,7 @@ Utiliza Next.js e Next-Auth para criar um app de Login autenticado, protegido co
 ## 📚 Referências
 
 - 🔗 [Next-Auth Login Authentication Tutorial with Next.js App Directory](https://youtu.be/w2h54xz6Ndw)
+- 🔗 [Build Secure Login & Signup with NextAuth.js (Next.js)](https://youtu.be/cWIQjKMhwj8)
 - 🔗 [NextAuth.js Official Site](https://next-auth.js.org/)
 - 🔗 [Next.js Official Site](https://nextjs.org/)
 
