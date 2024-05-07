@@ -3,6 +3,7 @@
 import { signIn, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { Button } from "../_components/ui/button";
 import Link from "next/link";
 
 export default function Login() {
@@ -80,12 +81,12 @@ export default function Login() {
           <p className="block mb-2 font-semibold text-sm text-primary">
             {error}
           </p>
-          <button
+          <Button
             type="submit"
             className="w-[100%] px-3 py-2 border bg-[#4caf50] text-white cursor-pointer text-base transition hover:bg-muted"
           >
             Entrar
-          </button>
+          </Button>
           <p className="mt-3 text-[#000]">
             Não possui uma conta?{" "}
             <Link href="/CreateAccount" className="text-[#017156] font-bold">
@@ -100,7 +101,7 @@ export default function Login() {
           <hr className="flex grow border-t-2 border-[#ccc]" />
         </div>
 
-        <button
+        <Button
           className="w-[100%] px-3 py-3 bg-transparent mb-3 cursor-pointer border border-solid text-black text-base transition hover:bg-muted"
           onClick={() => signIn("google")}
         >
@@ -138,9 +139,9 @@ export default function Login() {
             </span>
             <span>Continuar com Google</span>
           </div>
-        </button>
+        </Button>
 
-        <button
+        <Button
           className="w-[100%] px-3 py-3 bg-transparent mb-3 cursor-pointer border border-solid text-black text-base transition hover:bg-muted"
           onClick={() => signIn("github")}
         >
@@ -162,7 +163,7 @@ export default function Login() {
             </span>
             <span>Continuar com Github</span>
           </div>
-        </button>
+        </Button>
       </div>
     </div>
   );
