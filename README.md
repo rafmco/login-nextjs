@@ -59,6 +59,9 @@ Utiliza Next.js e Next-Auth para criar um app de Login autenticado, protegido co
     - `?_CLIENT_SECRET=""`
 - Configurar Providers
 - Enviar GET Request
+  - `http://localhost:3000/api/auth/providers`
+- Adicionar middleware para "proteger" com Next-Auth todo o projeto ou rotas específicas
+  - `.\middleware.ts`
 - Client Components
 
 
