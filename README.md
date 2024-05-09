@@ -14,7 +14,7 @@
 
 ## 💡LOGIN com NEXTJS e NEXT-AUTH
 
-Utiliza Next.js e Next-Auth para criar um app de Login autenticado, protegido com credenciais ou com providers OAuth (Google, Github, etc);
+Utiliza Next.js e Next-Auth para criar um app de Login autenticado, protegido com credenciais e com providers OAuth (Google e Github); A autenticação por 'Credencials' utiliza uma Custom API (definido nas variáveis de ambiente);
 
 ## 🛠️ Construído com:
 
@@ -23,14 +23,16 @@ Utiliza Next.js e Next-Auth para criar um app de Login autenticado, protegido co
 - [![ReactJS][React.js]][React-url]
 - [![TypeScript][TypeScript]][TypeScript-url]
 - [![NPM][NPM]][NPM-url]
+- [![GitHub][GitHub]][GitHub-url]
+- [![GoogleAPI][GoogleAPI]][GoogleAPI-url]
 
 
 ## 🚀 Instalação
 
 1. Baixe o repositório (`git clone git@github.com:Rafmco/login-nextjs.git`)
-2. Navegue até a pasta do módulo API (`cd login-nextjs`)
-3. Instalar dependências
-4. Copie e altere os arquivos de configurações conforme desejado
+2. Navegue até a pasta do projeto (`cd login-nextjs`)
+3. Instalar dependências `npm install`
+4. Copie .env.example e altere os valores das variáveis de ambiente
 5. `npm run dev`
 6. Abrir `http://localhost:3000`
 
@@ -58,11 +60,13 @@ Utiliza Next.js e Next-Auth para criar um app de Login autenticado, protegido co
     - `?_CLIENT_ID=""`
     - `?_CLIENT_SECRET=""`
 - Configurar Providers
-- Enviar GET Request
+  - `app\api\auth\[...nextauth]\options.ts`
+- Visualizar os providers por GET Request
   - `http://localhost:3000/api/auth/providers`
 - Adicionar middleware para "proteger" com Next-Auth todo o projeto ou rotas específicas
   - `.\middleware.ts`
-- Client Components
+- Client Components (rotas autenticadas, não autenticadas)
+- Login Component
 
 
 ## 📚 Referências
@@ -110,6 +114,8 @@ Distribuído sob a licença MIT. Veja `LICENSE.txt` para mais informações.
 [GitHub-url]:https://github.com/
 [GitHubActions]:https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white
 [GitHubActions-url]:https://github.com/features/actions
+[GoogleAPI]:https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white
+[GoogleAPI-url]:https://console.cloud.google.com
 [MariaDB]:https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white
 [MariaDB-url]:https://mariadb.org/
 [Fastify]:https://img.shields.io/badge/fastify-%23000000.svg?style=for-the-badge&logo=fastify&logoColor=white
