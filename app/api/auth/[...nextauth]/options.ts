@@ -27,16 +27,13 @@ export const authOptions: AuthOptions = {
           placeholder: "Senha",
         },
       },
-      // Get Data from database
-      // Retrieve credentials from user tables
+
+      /* 1 - Compare Data with hardcoded User
       async authorize(credentials) {
-        // This is where you need to retrieve user data
-        // to verify with credentials
-        // Docs: https://authjs.dev/getting-started/authentication/credentials#credentials-provider
         const user = {
           id: "1",
-          email: "rafael@dev",
-          name: "Rafael Machado",
+          email: "user@test",
+          name: "Hardcoded User Test",
           password: "nextauth",
         };
 
@@ -44,13 +41,71 @@ export const authOptions: AuthOptions = {
           credentials?.email === user.email &&
           credentials?.password === user.password
         ) {
+          return user;
+        } else {
+          throw new Error("User not found.");
+        }
+      },
+      */
+
+      /* 2 - Get Data from database
+      // Retrieve credentials from user tables
+      async authorize(credentials, req) {
+        const { email, password } = credentials;
+        const user = await prisma.user.findUnique({
+          where: {
+            email: email,
+          },
+        });
+        const hashedPassword = user.password;
+
+        // Compare the plain-text password with the hashed password
+        const passwordMatch = await bcrypt.compare(password, hashedPassword);
+
+        if (passwordMatch) {
           // return user object with the their profile data
           return user;
         } else {
           // No user found, so this is their first attempt to login
           // meaning this is also the place you could do registration
-          throw new Error("User not found.");
+          return null;
         }
+      },
+      */
+
+      /*
+        3 - Retrieve user data from custom API to verify with credentials */
+      async authorize(credentials, req) {
+        const payload = {
+          login: credentials?.email,
+          password: credentials?.password,
+        };
+
+        const res = await fetch(
+          `${process.env.API_HOST}:${process.env.API_PORT}/login`,
+          {
+            method: "POST",
+            body: JSON.stringify(payload),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        const user = await res.json();
+
+        if (user.erro) {
+          throw new Error(user.erro);
+        }
+        if (!res.ok) {
+          throw new Error(user.message);
+        }
+        // If no error and we have user data, return it
+        if (res.ok && user) {
+          return user;
+        }
+
+        // Return null if user data could not be retrieved
+        return null;
       },
     }),
   ],

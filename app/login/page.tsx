@@ -24,6 +24,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
+      /* Autenticar utilizando as credenciais em Auth Options */
       const result = signIn("credentials", {
         email,
         password,
