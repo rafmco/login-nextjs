@@ -56,7 +56,7 @@ export default function Home() {
             </div>
 
             <Image
-              src="/login-image.png"
+              src="/login-image.webp"
               alt="Login Image"
               className="dark:invert"
               width={500}
