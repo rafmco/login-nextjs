@@ -106,7 +106,7 @@ export default function Login() {
           onClick={() => signIn("google")}
         >
           <div className="flex flex-row items-center justify-evenly">
-            <span>
+            <span className="px-1">
               <svg viewBox="0 0 32 32" width="24" height="24">
                 <defs>
                   <path
@@ -146,7 +146,7 @@ export default function Login() {
           onClick={() => signIn("github")}
         >
           <div className="flex flex-row items-center justify-evenly">
-            <span>
+            <span className="px-1">
               <svg
                 width="24"
                 height="auto"
