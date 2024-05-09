@@ -37,7 +37,7 @@ Utiliza Next.js e Next-Auth para criar um app de Login autenticado, protegido co
 6. Abrir `http://localhost:3000`
 
 
-## 💻 Requsitos
+## 💻 Requisitos
 - Windows
   - Node.js
 
